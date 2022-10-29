@@ -29,6 +29,11 @@ public class Product {
 	// Método de referência estático
 	public static String staticUpperCaseName(Product p) {
 		return p.getName().toUpperCase();
+	}
+	
+	// Método de referência não estático
+	public String nonStaticUpperCaseName() {
+		return name.toUpperCase();
 		
 	}
 	

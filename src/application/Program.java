@@ -27,8 +27,12 @@ public class Program {
 		// Utilizando o STREAM para utilizar o MAP com o UpperCaseName(), e tranformando novamente a STREAM em LIST de novo, chamando uma nova lista de 'name'
 		//List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
 		
+		// Método estático
+		//List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		
 		// Método não estático
-		List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
+		
 		
 		// Percorrendo toda lista e imprimindo-a
 		names.forEach(System.out::println);
