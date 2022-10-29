@@ -26,6 +26,10 @@ public class Product {
 		this.price = price;
 	}
 	
-	
+	// Método de referência estático
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
+		
+	}
 	
 }
