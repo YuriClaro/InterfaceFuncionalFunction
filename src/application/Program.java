@@ -33,9 +33,12 @@ public class Program {
 		// Método não estático
 		//List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
 		
-		// Função lambda declarada
-		Function<Product, String> func = p -> p.getName().toUpperCase();
-		List<String> names = list.stream().map(func).collect(Collectors.toList());
+		// Expressão lambda declarada
+		//Function<Product, String> func = p -> p.getName().toUpperCase();
+		//List<String> names = list.stream().map(func).collect(Collectors.toList());
+		
+		// Expressão Lambda Inline
+		List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 		
 		// Percorrendo toda lista e imprimindo-a
 		names.forEach(System.out::println);
